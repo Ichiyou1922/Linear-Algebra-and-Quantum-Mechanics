@@ -61,7 +61,7 @@ double complex inner_product(const ComplexVector *v1, const ComplexVector *v2) {
     printf("vector size is not match\n");
     exit(1);
   }
-  double complex in_product;
+  double complex in_product = 0;
   for (int i = 0; i < v1->size; i++) {
     in_product += conj(v1->data[i]) * v2->data[i];
   }
