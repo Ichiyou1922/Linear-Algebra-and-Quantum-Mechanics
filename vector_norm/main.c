@@ -67,6 +67,7 @@ int main(void) {
     double complex idx_data = get_element(v, i);
     printf("z = %.2f + %.2fi\n", creal(idx_data), cimag(idx_data));
   }
+  printf("norm: %f\n", norm_square(v));
   free_vector(v);
   return 0;
 }
