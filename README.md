@@ -25,3 +25,10 @@
 5. 関数`double complex get_element(const ComplexVector *v, int index)`の作成
   - 値の取得．範囲チェックする．
   - なぜ引数に`const`?
+
+### norm_squaredの実装
+- ベクトルのノルムの二乗を返す関数
+```math
+|v|^2 = \sum_{i+0}^{N-1}|v_{i}|^2= \sum_{i+0}^{N-1} (v_{i} \cdot v_{i}*)
+```
+### 内積(Inner Product)の実装
