@@ -32,3 +32,13 @@
 |v|^2 = \sum_{i+0}^{N-1}|v_{i}|^2= \sum_{i+0}^{N-1} (v_{i} \cdot v_{i}*)
 ```
 ### 内積(Inner Product)の実装
+- 二つのベクトル間の内積は以下で表される．
+```math
+\langle \phi|\psi \rangle = \sum_{j=0}^{N-1}\phi_{j}*\psi_{j}
+```
+- 左側のブラベクトル $\langle \phi|$ の要素が共役複素数になる．
+  - 順序を逆にすると複素共役になる．
+```math
+\langle \psi|\phi \rangle = \langle \phi|\psi \rangle *
+```
+- 内積を計算する関数を追加する．
