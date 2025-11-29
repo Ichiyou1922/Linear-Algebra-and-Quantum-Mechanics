@@ -42,3 +42,6 @@
 \langle \psi|\phi \rangle = \langle \phi|\psi \rangle *
 ```
 - 内積を計算する関数を追加する．
+
+## 第2回: 演算子の実装(行列構造体)
+
