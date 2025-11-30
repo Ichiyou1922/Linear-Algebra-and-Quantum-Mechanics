@@ -110,3 +110,11 @@ H = \frac{\Omega}{2}\sigma_{x} = \begin{pmatrix} 0 & 0.5 \\ 0.5 & 0 \end{pmatrix
 ```
 3. `dt=0.01`, `ステップ数=1000`->t=0~t=10
 
+## 第5回: 離調(Detuning)とエネルギーギャップ
+- ラビ振動は共鳴と呼ばれる特殊な状態だった．
+- 現実の量子コンピュータ制御では，制御パルスの周波数がわずかにずれることが頻繁にある->離調(Detuning, $\Delta$ )という．
+- ハミルトニアンに成分を追加する．
+```math
+H = \frac{1}{2} \begin{pmatrix} -\Delta & \Omega \\ \Omega & -\Delta \end{pmatrix}
+```
+
