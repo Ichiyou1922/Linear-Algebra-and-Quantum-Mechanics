@@ -83,7 +83,7 @@ P(↑)=|c_{0}|^2, P(↓)=|c_{1}|^2
 3. シュレーディンガー方程式
 - 状態 $|\psi \rangle$ が決まった時，この状態はどのように変化するか？->シュレーディンガー方程式はこれを表す．
 ```math
-i\hbar \frac{d}{dt}|\psi (t)\rangle = \hat H |\psi (t) \rangle
+-i\hbar \frac{d}{dt}|\psi (t)\rangle = \hat H |\psi (t) \rangle
 ```
   - 左辺は状態ベクトル $|\psi \rangle$ の速度(時間変化率)を表す．
     - 虚数単位iのおかげで確率は減衰せずに振動する．
@@ -96,4 +96,17 @@ i\hbar \frac{d}{dt}|\psi (t)\rangle = \hat H |\psi (t) \rangle
 - シュレディンガー方程式の言っていることはルンゲクッタ法のプロセスに似ている．
   - 現在の速度を使って，少し先の未来の状態を予測する．
 
-- 線形演算関数`add_vector`を作ろう．
+- 線形演算関数`add_vector`を作って，行列同士の足し算やスカラー倍を可能にする．
+
+### ルンゲクッタ法でラビ振動を再現
+- ラビ振動->量子ビットに電磁波を当てると，状態が0->1->0...と周期的に反転する現象．
+1. ハミルトニアンH`main関数内`:
+```math
+H = \frac{\Omega}{2}\sigma_{x} = \begin{pmatrix} 0 & 0.5 \\ 0.5 & 0 \end{pmatrix} (ただし\Omega = 1.0)
+```
+2. 初期状態 $\psi_{0}$ は上向き
+```math
+|\psi (0) \rangle = \begin{pmatrix} 1 \\ 0 \end{pmatrix}
+```
+3. `dt=0.01`, `ステップ数=1000`->t=0~t=10
+
