@@ -199,17 +199,19 @@ int main(void) {
   double t = 0.0;
   double dt = 0.01;
   int steps = 1000;
+  double omega = 1.0;
+  double delta = 2.0;
   printf("time, prob_0\n");
 
   ComplexVector *current_psi = create_vector(2);
-  set_vector_element(current_psi, 0, 0);
-  set_vector_element(current_psi, 1, 1);
+  set_vector_element(current_psi, 0, 1);
+  set_vector_element(current_psi, 1, 0);
 
   ComplexMatrix *H = create_matrix(2, 2);
-  set_matrix_element(H, 0, 0, 0);
-  set_matrix_element(H, 0, 1, 0.5);
-  set_matrix_element(H, 1, 0, 0.5);
-  set_matrix_element(H, 1, 1, 0);
+  set_matrix_element(H, 0, 0, -0.5 * delta);
+  set_matrix_element(H, 0, 1, 0.5 * omega);
+  set_matrix_element(H, 1, 0, 0.5 * omega);
+  set_matrix_element(H, 1, 1, +0.5 * delta);
 
   for (int i = 0; i< steps; i++) {
     printf("%f,%f\n", t, creal(current_psi->data[0] * conj(current_psi->data[0])));

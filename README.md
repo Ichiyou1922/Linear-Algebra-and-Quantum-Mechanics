@@ -117,4 +117,4 @@ H = \frac{\Omega}{2}\sigma_{x} = \begin{pmatrix} 0 & 0.5 \\ 0.5 & 0 \end{pmatrix
 ```math
 H = \frac{1}{2} \begin{pmatrix} -\Delta & \Omega \\ \Omega & -\Delta \end{pmatrix}
 ```
-
+- `Detuning-and-EnergyGap`で確認
