@@ -118,3 +118,53 @@ H = \frac{\Omega}{2}\sigma_{x} = \begin{pmatrix} 0 & 0.5 \\ 0.5 & 0 \end{pmatrix
 H = \frac{1}{2} \begin{pmatrix} -\Delta & \Omega \\ \Omega & -\Delta \end{pmatrix}
 ```
 - `Detuning-and-EnergyGap`で確認
+
+## 第6回: ブロッホ球(Bloch Sphere)
+- 今まで扱ってきた状態ベクトル $|\psi \rangle = \begin{pmatrix} c_{0} \\ c_{1} \end{pmatrix}...(c_{0}, x_{1} \in \mathbb{c})$ は，合計で四つの実数を持っている->イメージできない！
+- 物理的な制約により自由度は減っていく．
+1. 規格化条件: &|c_{0}|^2+|c_{1}|^2=1& により自由度は一つ減る->三次元
+2. 全体位相の無視: 量子力学では，ベクトル全体に $e^{i\delta}$ を掛けても物理的な確率は変わらない．
+  - $|\psi \rangle$ と $e^{i\delta}|\psi \rangle$ は物理的に同じ状態と見なせるので，自由度は一つ減る->二次元
+- 二次元の自由度なら球面上の点として表現できる->ブロッホ球
+  - 例えば北極が上向きスピン，南極が下向きスピン，赤道が重ね合わせ状態...のように
+
+### 数値計算による座標変換(Mapping)
+- パウリ行列 $(\sigma_{x}, \sigma_{y}, \sigma_{z})$ は2準位系(量子ビット)に置ける観測の基準．
+  - それぞれが下のような形式を持っている
+```math
+\sigma_{z} = \begin{pmatrix} 1 & 0 \\ 0 & -1 \end{pmatrix}
+```
+  - 上向き(+1)か下向き(-1)かを測る．
+  - 固有ベクトル: $\begin{pmatrix} 1 \\ 0 \end{pmatrix}$ (上)， &\begin{pmatrix} 0 \\ 1 \end(pmatrix)& (下)
+
+```math
+\sigma_{x} = \begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix}
+```
+  - 前向きか後ろ向きか( $c_{0}とc_{1}$ が同位相か逆位相か)
+  - 固有ベクトル: $\frac{1}{\sqrt{2}}\begin{pmatrix} 1 \\ 1 \end{pmatrix}$ (上)， &\frac{1}{\sqrt{2}}\begin{pmatrix} 1 \\ - \end(pmatrix)& (下)
+
+```math
+\sigma_{y} = \begin{pmatrix} 0 & -i \\ i & 0 \end{pmatrix}
+```
+  - 右向きか左向きか
+- これらは互いに直交しているから，まさに三次元の座標軸にぴったり．
+- 期待値と座標
+  - ある状態 $|\psi \rangle$ において，物理量Aを観測したときの期待値 $\langle A \rangle$ は以下
+```math
+\langle A \rangle = \langle\psi|A|\psi \rangle
+```
+- 座標を導出してみよう．
+  - $\sigma_{z}$ の期待値を出すと，
+```math
+z = \langle \psi | A | \psi \rangle = |c_{0}|^2 - |c_{1}|^2
+```
+  - 上100%なら1, 下100%なら-1を出す．高さらしい．
+
+- $x^2+y^2+z^2$ にそれぞれ代入すると，状態ベクトルは規格化されていることを利用して，結果は1になる．
+  - どのような複素ベクトル $|\psi \rangle$ であっても，パウリ行列の期待値を計算して座標にすれば，必ず半径1の球面上の点になる．
+
+### ブラケット記法
+1. ケットベクトル $|\psi \rangle$ (状態)は列ベクトル $(N \times 1)$ 
+2. ブラベクトル $\langle \psi |$ はケットベクトルのエルミート共役になっている(転置して複素共役をとる)
+  - これは自分自身との内積を正の実数にするため．->確率はマイナスになってほしくない！
+
