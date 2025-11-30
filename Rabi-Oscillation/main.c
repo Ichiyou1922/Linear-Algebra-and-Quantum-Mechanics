@@ -202,8 +202,8 @@ int main(void) {
   printf("time, prob_0\n");
 
   ComplexVector *current_psi = create_vector(2);
-  set_vector_element(current_psi, 0, 0);
-  set_vector_element(current_psi, 1, 1);
+  set_vector_element(current_psi, 0, 1);
+  set_vector_element(current_psi, 1, 0);
 
   ComplexMatrix *H = create_matrix(2, 2);
   set_matrix_element(H, 0, 0, 0);
