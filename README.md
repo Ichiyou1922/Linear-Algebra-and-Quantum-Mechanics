@@ -141,7 +141,7 @@ H = \frac{1}{2} \begin{pmatrix} -\Delta & \Omega \\ \Omega & -\Delta \end{pmatri
   - 上向き(+1)か下向き(-1)かを測る．
   - 固有ベクトル: 
 ```math
-\begin{pmatrix} 1 \\ 0 \end{pmatrix}(上)  \\
+\begin{pmatrix} 1 \\ 0 \end{pmatrix}(上),  \\
 \begin{pmatrix} 0 \\ 1 \end{pmatrix}(下)
 ```
 ```math
@@ -150,7 +150,7 @@ H = \frac{1}{2} \begin{pmatrix} -\Delta & \Omega \\ \Omega & -\Delta \end{pmatri
   - 前向きか後ろ向きか( $c_{0}とc_{1}$ が同位相か逆位相か)
   - 固有ベクトル: 
 ```math
-\frac{1}{\sqrt{2}}\begin{pmatrix} 1 \\ 1 \end{pmatrix} (上)  \\
+\frac{1}{\sqrt{2}}\begin{pmatrix} 1 \\ 1 \end{pmatrix} (上),  \\
 \frac{1}{\sqrt{2}}\begin{pmatrix} 1 \\ - \end{pmatrix} (下)
 ```
 ```math
@@ -178,3 +178,13 @@ z = \langle \psi | A | \psi \rangle = |c_{0}|^2 - |c_{1}|^2
 2. ブラベクトル $\langle \psi |$ はケットベクトルのエルミート共役になっている(転置して複素共役をとる)
   - これは自分自身との内積を正の実数にするため．->確率はマイナスになってほしくない！
 
+### 波動関数 $\psi (x)$
+- 今まで扱ってきた状態ベクトル $|\psi \rangle = \begin{pmatrix} c_{0} \\ c_{1} \end{pmatrix}$ は状態の重ね合わせの程度を示すベクトルだった．
+- 波動関数 $\psi (x)$ は状態ベクトルを位置座標xに展開したもの．
+  - Def: 空間の各点xにおいて粒子がそこに存在する**確率振幅**を与える複素数値関数
+  - $|\psi (x)|^2$ がその点xで粒子を観測する**確率密度**になる.
+- 空間座標xについて
+  - 物理的には: 波動関数 $\psi (x)$ が無限個のxの値全てに値を持つ->無限次元のベクトル
+  - 計算機的には: xの範囲を $\Delta x$ 間隔でN分割しよう-> $x_{j}=j \cdot \Delta x$ となり，要素数はN個(配列)
+
+## 分量が増えたのでこのリポジトリはここまで
