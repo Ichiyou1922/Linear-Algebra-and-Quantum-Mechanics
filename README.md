@@ -120,9 +120,13 @@ H = \frac{1}{2} \begin{pmatrix} -\Delta & \Omega \\ \Omega & -\Delta \end{pmatri
 - `Detuning-and-EnergyGap`で確認
 
 ## 第6回: ブロッホ球(Bloch Sphere)
-- 今まで扱ってきた状態ベクトル $|\psi \rangle = \begin{pmatrix} c_{0} \\ c_{1} \end{pmatrix}...(c_{0}, x_{1} \in \mathbb{c})$ は，合計で四つの実数を持っている->イメージできない！
+- 今まで扱ってきた状態ベクトル
+```math
+|\psi \rangle = \begin{pmatrix} c_{0} \\ c_{1} \end{pmatrix} ...(c_{0}x_{1} \in \mathbb{c})
+```
+は，合計で四つの実数を持っている->イメージできない！
 - 物理的な制約により自由度は減っていく．
-1. 規格化条件: &|c_{0}|^2+|c_{1}|^2=1& により自由度は一つ減る->三次元
+1. 規格化条件: $ |c_{0}|^2+|c_{1}|^2=1 $ により自由度は一つ減る->三次元
 2. 全体位相の無視: 量子力学では，ベクトル全体に $e^{i\delta}$ を掛けても物理的な確率は変わらない．
   - $|\psi \rangle$ と $e^{i\delta}|\psi \rangle$ は物理的に同じ状態と見なせるので，自由度は一つ減る->二次元
 - 二次元の自由度なら球面上の点として表現できる->ブロッホ球
@@ -135,14 +139,18 @@ H = \frac{1}{2} \begin{pmatrix} -\Delta & \Omega \\ \Omega & -\Delta \end{pmatri
 \sigma_{z} = \begin{pmatrix} 1 & 0 \\ 0 & -1 \end{pmatrix}
 ```
   - 上向き(+1)か下向き(-1)かを測る．
-  - 固有ベクトル: $\begin{pmatrix} 1 \\ 0 \end{pmatrix}$ (上)， &\begin{pmatrix} 0 \\ 1 \end(pmatrix)& (下)
-
+  - 固有ベクトル: 
+```math
+\begin{pmatrix} 1 \\ 0 \end{pmatrix} (上)， \begin{pmatrix} 0 \\ 1 \end(pmatrix) (下)
+```
 ```math
 \sigma_{x} = \begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix}
 ```
   - 前向きか後ろ向きか( $c_{0}とc_{1}$ が同位相か逆位相か)
-  - 固有ベクトル: $\frac{1}{\sqrt{2}}\begin{pmatrix} 1 \\ 1 \end{pmatrix}$ (上)， &\frac{1}{\sqrt{2}}\begin{pmatrix} 1 \\ - \end(pmatrix)& (下)
-
+  - 固有ベクトル: 
+```math
+\frac{1}{\sqrt{2}}\begin{pmatrix} 1 \\ 1 \end{pmatrix} (上)， \frac{1}{\sqrt{2}}\begin{pmatrix} 1 \\ - \end(pmatrix) (下)
+```
 ```math
 \sigma_{y} = \begin{pmatrix} 0 & -i \\ i & 0 \end{pmatrix}
 ```
