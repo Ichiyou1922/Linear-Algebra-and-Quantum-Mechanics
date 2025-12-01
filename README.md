@@ -141,7 +141,8 @@ H = \frac{1}{2} \begin{pmatrix} -\Delta & \Omega \\ \Omega & -\Delta \end{pmatri
   - 上向き(+1)か下向き(-1)かを測る．
   - 固有ベクトル: 
 ```math
-\begin{pmatrix} 1 \\ 0 \end{pmatrix} (上)， \begin{pmatrix} 0 \\ 1 \end(pmatrix) (下)
+\begin{pmatrix} 1 \\ 0 \end{pmatrix}(上)  \\
+\begin{pmatrix} 0 \\ 1 \end{pmatrix}(下)
 ```
 ```math
 \sigma_{x} = \begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix}
@@ -149,7 +150,8 @@ H = \frac{1}{2} \begin{pmatrix} -\Delta & \Omega \\ \Omega & -\Delta \end{pmatri
   - 前向きか後ろ向きか( $c_{0}とc_{1}$ が同位相か逆位相か)
   - 固有ベクトル: 
 ```math
-\frac{1}{\sqrt{2}}\begin{pmatrix} 1 \\ 1 \end{pmatrix} (上)， \frac{1}{\sqrt{2}}\begin{pmatrix} 1 \\ - \end(pmatrix) (下)
+\frac{1}{\sqrt{2}}\begin{pmatrix} 1 \\ 1 \end{pmatrix} (上)  \\
+\frac{1}{\sqrt{2}}\begin{pmatrix} 1 \\ - \end{pmatrix} (下)
 ```
 ```math
 \sigma_{y} = \begin{pmatrix} 0 & -i \\ i & 0 \end{pmatrix}
